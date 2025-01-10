@@ -5,7 +5,7 @@ This project aims to develop a highly accurate fire detection system using **con
 
 🌟 Features
 
-🔥 Fire Detection: A custom CNN model optimized through multiple modifications for robust fire detection.
+🔥 Fire Detection: A custom CNN model optimized through multiple modifications for robust fire detection.\\
 📊 Model Comparison: Implementation of AlexNet, VGG, ResNet to compare with the custom CNN model.
 📈 Model Evaluation: Tools to evaluate models using images and real-time video streams.
 ⚡ Real-Time Detection: Fire detection in live video streams using OpenCV and TensorFlow.
