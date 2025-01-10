@@ -1,4 +1,4 @@
-#🔥 Fire Detection Project
+# 🔥 Fire Detection Project
 🚒 Detecting Fire and Non-Fire Images with Advanced CNN Architectures
 
 
