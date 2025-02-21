@@ -5,54 +5,54 @@ The importance of using a [fire detection alert system](https://ejsit-journal.co
 This project aims to develop a highly accurate fire detection system using [**convolutional neural networks (CNNs)**](https://www.geeksforgeeks.org/introduction-convolution-neural-network/) and compare its performance with popular architectures such as [**AlexNet**](https://medium.com/@siddheshb008/alexnet-architecture-explained-b6240c528bd5), [**VGGNet**](https://medium.com/@siddheshb008/vgg-net-architecture-explained-71179310050f), and [**ResNet**](https://medium.com/@siddheshb008/resnet-architecture-explained-47309ea9283d). It also includes real-time detection functionality and model evaluation tools.
 
 ### 1. CNN-MODEL :
-L'architecture d'un modèle de réseau de neurones convolutifs (CNN) conçu pour la détection de feu. Le modèle prend en entrée des images de taille 224x224 avec 9 canaux.
-### Couche d'Entrée
-- **Dimensions d'entrée** : `(None, 224, 224, 9)`, où `None` représente la taille du lot.
+The architecture of a convolutional neural network (CNN) model designed for fire detection. The model takes input images of size 224x224 with 9 channels.
+### Input Layer
+- **Input Dimensions** : `(None, 224, 224, 9)`, where `None` represents the batch size.
 
-### Couches Convolutives (`conv2d`)
-1. **Première couche convolutive** :
-   - **Nombre de filtres** : 32
-   - **Fonction d'activation** : ReLU
-   - **Dimensions de sortie** : `(None, 222, 222, 32)`
+### Convolutional Layers (`conv2d`)
+1. **First Convolutional Layer** :
+   - **Number of Filters** : 32
+   - **Activation Function** : ReLU
+   - **Output Dimensions** : `(None, 222, 222, 32)`
 
-2. **Couches convolutives suivantes** :
-   - **Nombre de filtres** : 64, 120, 256
-   - **Fonction d'activation** : ReLU
-   - **Réduction progressive des dimensions spatiales**
+2. **Subsequent Convolutional Layers** :
+   - **Number of Filters** : 64, 120, 256
+   - **Activation Function** : ReLU
+   - **Gradual Reduction of Spatial Dimensions**
 
-### Normalisation par Lots (`batch_normalization`)
-- Appliquée après chaque couche convolutive pour normaliser les activations, améliorant ainsi la stabilité et la vitesse d'entraînement.
+### Batch Normalization (`batch_normalization`)
+- Applied after each convolutional layer to normalize activations, improving training stability and speed.
 
-### Couches de Max Pooling (`max_pooling2d`)
-- Réduisent les dimensions spatiales en sélectionnant la valeur maximale dans chaque fenêtre de pooling.
-- Aident à diminuer la charge computationnelle et à contrôler le surapprentissage.
+### Max Pooling Layers (`max_pooling2d`)
+- Reduce spatial dimensions by selecting the maximum value within each pooling window.
+- Help reduce computational load and prevent overfitting.
 
-### Couche de Mise à Plat (`flatten`)
-- Convertit la sortie 3D de la dernière couche de pooling en un vecteur 1D de taille 36864, le préparant pour les couches entièrement connectées.
+### Flatten Layer (`flatten`)
+- Converts the 3D output of the last pooling layer into a 1D vector of size 36864, preparing it for fully connected layers.
 
-### Couches Denses (`dense`)
-1. **Deux couches denses** :
-   - **Unités** : 256
-   - **Fonction d'activation** : ReLU
-   - **Apprentissage de motifs complexes dans les données**
+### Dense Layers (`dense`)
+1. **Two Dense Layers** :
+   - **Units** : 256
+   - **Activation Function** : ReLU
+   - **Learn complex patterns in the data**
 
-2. **Couches de Dropout** :
-   - Incluses après chaque couche dense pour éviter le surapprentissage en désactivant aléatoirement une fraction des unités d'entrée pendant l'entraînement.
+2. **Dropout Layers** :
+   - Included after each dense layer to avoid overfitting by randomly deactivating a fraction of input units during training.
 
-### Couche de Sortie (`dense_2`)
-- **Unités** : 1
-- **Fonction d'activation** : Sigmoïde
-- **Adaptée pour des tâches de classification binaire comme la détection de feu**
+### Output Layer (`dense_2`)
+- **Units** : 1
+- **Activation Function** : Sigmoïde
+- **Suitable for binary classification tasks like fire detection**
 
-## Utilisation
+## Usage
 
-Pour utiliser ce modèle, suivez les étapes suivantes :
+To use this model, follow these steps: :
 
-1. Clonez ce dépôt.
-2. Installez les dépendances nécessaires.
-3. Chargez les données d'entraînement et de test.
-4. Entraînez le modèle en utilisant le script fourni.
-5. Évaluez les performances du modèle sur les données de test.
+1. Clone this repository
+2. Install the required dependencies.
+3. Load the training and test data.
+4. Train the model using the provided script.
+5. Evaluate the model's performance on the test data.
 
 ## Features
 
@@ -68,7 +68,7 @@ Pour utiliser ce modèle, suivez les étapes suivantes :
 
 🗂 www.kaggle.com/datasets/anhalayoub/fire-data
 
-## Dépendances
+## Dependencies
 
 - `TensorFlow`
 - `Keras`
